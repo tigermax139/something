@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sumTo</title>
+</head>
+<body>
+	<h1>something...</h1>
+	<p>
+			Сделайте три варианта решения:
+<ul>
+	<li><span>
+		С использованием цикла.
+	</span></li>
+	<li><span>
+		Через рекурсию, т.к. sumTo(n) = n + sumTo(n-1) для n > 1.
+	</span></li>
+	<li><span>
+		С использованием формулы для суммы арифметической прогрессии.
+	</span></li>
+</ul>
+	</p>
+	<p>
+		enter in console....
+		<ul>
+			<li>sumTo_1(n)</li>
+			<li>sumTo_2(n)</li>
+			<li>sumTo_3(n)</li>
+		</ul>
+	</p>
+
+<script>
+	function sumTo_1(n) {
+		let counter = 0;
+		for (let i = 0; i <= n; i++){
+			counter = counter + i;
+		}
+		alert(counter);
+	}
+	function sumTo_2(n) {
+		if(n > 1){
+			return n + sumTo_2(n-1);
+		}
+		else {
+			return n;
+		}
+		alert(n);
+	}
+	function sumTo_3(n){
+		let counter = ((2 + (n-1))/2)*n;
+		alert(counter);
+	}
+</script>
+</body>
+</html>
